@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv363m441bqsm"]
+
+[ext_resource type="Texture2D" uid="uid://csorace4isdyu" path="res://Sprites/Lantern.png" id="1_4dpyx"]
+[ext_resource type="PackedScene" uid="uid://6n8pa1y4gtlt" path="res://Scenes/Levels/player.tscn" id="1_tlcug"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tlcug")]
+
+[node name="Lantern" type="Sprite2D" parent="."]
+position = Vector2(332, 84.99998)
+scale = Vector2(4.693548, 6.790323)
+texture = ExtResource("1_4dpyx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
