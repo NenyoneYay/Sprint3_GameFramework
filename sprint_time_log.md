@@ -26,8 +26,8 @@ The expected minimum amount of time each Sprint for each category is as follows:
 
 |Date      |Start Time|Category|Description                                 |Total Minutes|
 |----------|----------|:------:|--------------------------------------------|:-----------:|
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
+|  5/27    |  3:00    |   TP   | Added a + button to add custom spells      |    60       |
+|  5/28    |  7:00    |   IM   | Created player, camera, basic movement     |    120      |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
