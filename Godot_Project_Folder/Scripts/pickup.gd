@@ -1,6 +1,6 @@
 extends Area2D
 
-var bounce_height : float = 3.0
+var bounce_height : float = 5.0
 var bounce_speed : float = 5.0
 
 
@@ -31,3 +31,5 @@ func _on_body_entered(body):
 	if (name.contains("Pearl")):
 		body.increase_score(100)
 	queue_free()
+	
+	

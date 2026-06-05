@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv363m441bqsm"]
+[gd_scene load_steps=7 format=3 uid="uid://cv363m441bqsm"]
 
 [ext_resource type="Texture2D" uid="uid://csorace4isdyu" path="res://Sprites/Lantern.png" id="1_4dpyx"]
 [ext_resource type="PackedScene" uid="uid://6n8pa1y4gtlt" path="res://Scenes/Levels/player.tscn" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://cslieuium405d" path="res://Scenes/pearl.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://csqk30irnkxd5" path="res://Scenes/diamond.tscn" id="4_iixi8"]
+[ext_resource type="Texture2D" uid="uid://daulcvpqsdgu6" path="res://Sprites/035.png" id="5_cyadu"]
+[ext_resource type="AudioStream" uid="uid://cv3i4vy7qwx3n" path="res://Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).mp3" id="6_xgxfi"]
 
 [node name="Main" type="Node2D"]
 
@@ -33,3 +35,15 @@ position = Vector2(-208, 60)
 
 [node name="Diamond2" parent="Collectables" instance=ExtResource("4_iixi8")]
 position = Vector2(-135, 96)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = -1
+texture_filter = 2
+position = Vector2(1.0000305, 0.5000284)
+scale = Vector2(0.7500001, 0.6117425)
+texture = ExtResource("5_cyadu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xgxfi")
