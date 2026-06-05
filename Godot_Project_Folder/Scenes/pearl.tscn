@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cslieuium405d"]
+
+[ext_resource type="Script" uid="uid://d1as3b5qwf6vt" path="res://Scripts/pickup.gd" id="1_mxq4d"]
+[ext_resource type="Texture2D" uid="uid://dxf5u7mg86p4t" path="res://Sprites/pickups.png" id="2_vk3tp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xgxfi"]
+radius = 7.0
+
+[node name="Pearl" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_mxq4d")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_vk3tp")
+region_enabled = true
+region_rect = Rect2(-0.3955841, -0.39483452, 16.790123, 16.790125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xgxfi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

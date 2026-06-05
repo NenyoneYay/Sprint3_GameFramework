@@ -15,6 +15,10 @@ run/main_scene="uid://cv363m441bqsm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://Scripts/player_stats.gd"
+
 [dotnet]
 
 project/assembly_name="Sprint3_Game"
