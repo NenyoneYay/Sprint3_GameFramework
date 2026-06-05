@@ -22,10 +22,10 @@ zoom = Vector2(2, 2)
 [node name="Collectables" type="Node" parent="."]
 
 [node name="Pearl2" parent="Collectables" instance=ExtResource("3_3mqfk")]
-position = Vector2(68, 122)
+position = Vector2(50, 80)
 
 [node name="Pearl" parent="Collectables" instance=ExtResource("3_3mqfk")]
-position = Vector2(145, 115)
+position = Vector2(160, 85)
 
 [node name="Pearl3" parent="Collectables" instance=ExtResource("3_3mqfk")]
 position = Vector2(97, 54)
