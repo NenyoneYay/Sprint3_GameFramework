@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://6n8pa1y4gtlt"]
 
 [ext_resource type="Script" uid="uid://ckg5hbtp2235l" path="res://Scripts/Player.gd" id="1_hfyuw"]
-[ext_resource type="Texture2D" uid="uid://csorace4isdyu" path="res://Sprites/Lantern.png" id="1_ry1fy"]
 [ext_resource type="Texture2D" uid="uid://di6td0gggj88q" path="res://Sprites/Sword.png" id="2_hfyuw"]
+[ext_resource type="Texture2D" uid="uid://bjnp84cwbmr1q" path="res://Sprites/characer.png" id="2_oswrj"]
 [ext_resource type="Script" uid="uid://bwu6rp5s80hhy" path="res://Scripts/weapon.gd" id="3_oswrj"]
 [ext_resource type="Script" uid="uid://bkaxumueehq3q" path="res://Scenes/Levels/character_ui.gd" id="4_56jwa"]
 
@@ -22,9 +22,11 @@ motion_mode = 1
 script = ExtResource("1_hfyuw")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(4.25, -2.75)
+position = Vector2(-2.500001, 1.1920929e-06)
 scale = Vector2(3.3709676, 3.3709676)
-texture = ExtResource("1_ry1fy")
+texture = ExtResource("2_oswrj")
+region_enabled = true
+region_rect = Rect2(3.2146492, 1.1525564, 9.746452, 13.401374)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.75, 0.24998474)
