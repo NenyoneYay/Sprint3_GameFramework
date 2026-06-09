@@ -21,5 +21,6 @@ func _process(_delta):
 	var mouse_pos : Vector2 = get_global_mouse_position()
 	var mouse_dir : Vector2 = (mouse_pos - global_position).normalized()
 	weapon_origin.rotation_degrees = rad_to_deg(mouse_dir.angle()) + 90
-	
-	
+
+func take_damage():
+	get_tree().change_scene_to_file("res://Scenes/Levels/game_over.tscn")

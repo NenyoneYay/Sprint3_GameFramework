@@ -1,18 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://6n8pa1y4gtlt"]
+[gd_scene load_steps=9 format=3 uid="uid://6n8pa1y4gtlt"]
 
 [ext_resource type="Script" uid="uid://ckg5hbtp2235l" path="res://Scripts/Player.gd" id="1_hfyuw"]
 [ext_resource type="Texture2D" uid="uid://csorace4isdyu" path="res://Sprites/Lantern.png" id="1_ry1fy"]
 [ext_resource type="Texture2D" uid="uid://di6td0gggj88q" path="res://Sprites/Sword.png" id="2_hfyuw"]
+[ext_resource type="Script" uid="uid://bwu6rp5s80hhy" path="res://Scripts/weapon.gd" id="3_oswrj"]
 [ext_resource type="Script" uid="uid://bkaxumueehq3q" path="res://Scenes/Levels/character_ui.gd" id="4_56jwa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iixi8"]
 radius = 14.035668
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oswrj"]
+size = Vector2(8.75, 34.999992)
+
 [sub_resource type="LabelSettings" id="LabelSettings_hfyuw"]
 font_size = 40
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, 20)
+scale = Vector2(0.8, 0.8)
 motion_mode = 1
 script = ExtResource("1_hfyuw")
 
@@ -25,8 +30,9 @@ texture = ExtResource("1_ry1fy")
 position = Vector2(-2.75, 0.24998474)
 shape = SubResource("CircleShape2D_iixi8")
 
-[node name="Weapon" type="Node2D" parent="."]
+[node name="Weapon" type="Node2D" parent="." groups=["Weapon"]]
 position = Vector2(-2, 1)
+script = ExtResource("3_oswrj")
 
 [node name="WeaponSprite" type="Sprite2D" parent="Weapon"]
 position = Vector2(0, -30.000002)
@@ -35,6 +41,13 @@ texture = ExtResource("2_hfyuw")
 
 [node name="Swordpoint" type="Node2D" parent="Weapon"]
 position = Vector2(0, -28)
+
+[node name="Area2D" type="Area2D" parent="Weapon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/Area2D"]
+position = Vector2(0.12499976, -32.249985)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_oswrj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("4_56jwa")
@@ -46,3 +59,5 @@ offset_right = 61.0
 offset_bottom = 34.0
 text = "500"
 label_settings = SubResource("LabelSettings_hfyuw")
+
+[connection signal="body_entered" from="Weapon/Area2D" to="Weapon" method="_on_area_2d_body_entered"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5ccni5mfwh05"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g6ap3"]
+font_size = 200
+
+[node name="GameOver" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_top = 182.0
+offset_right = 1148.0
+offset_bottom = 469.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_g6ap3")

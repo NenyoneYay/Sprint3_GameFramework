@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://cv363m441bqsm"]
+[gd_scene load_steps=15 format=4 uid="uid://cv363m441bqsm"]
 
 [ext_resource type="PackedScene" uid="uid://6n8pa1y4gtlt" path="res://Scenes/Levels/player.tscn" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://cslieuium405d" path="res://Scenes/pearl.tscn" id="3_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://csqk30irnkxd5" path="res://Scenes/diamond.tscn" id="4_iixi8"]
 [ext_resource type="Texture2D" uid="uid://cxuvmar5871be" path="res://Sprites/CaveA3v1.png" id="6_5f3p6"]
 [ext_resource type="AudioStream" uid="uid://cv3i4vy7qwx3n" path="res://Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).mp3" id="6_xgxfi"]
-[ext_resource type="PackedScene" uid="uid://ftb88a3proys" path="res://Scenes/Levels/enemy.tscn" id="7_5f3p6"]
 [ext_resource type="Texture2D" uid="uid://b1uev07xe7u6i" path="res://Sprites/GrassTiles.png" id="7_jv26f"]
+[ext_resource type="Script" uid="uid://cfe0va7uxvd65" path="res://Scripts/enemy.gd" id="7_rb0md"]
+[ext_resource type="Texture2D" uid="uid://jcb548wi00le" path="res://Sprites/CrabMaybe.png" id="8_u5ghp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rb0md"]
 texture = ExtResource("6_5f3p6")
@@ -165,6 +166,9 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/2 = SubResource("TileSetAtlasSource_hwvp3")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwvp3"]
+radius = 8.0
+
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_tlcug")]
@@ -221,14 +225,17 @@ position = Vector2(4239.9995, 144)
 scale = Vector2(15.486106, 0.1096154)
 polygon = PackedVector2Array(-255, 162, -291, 162, -291, -163, -255, -163)
 
-[node name="Enemy" parent="." instance=ExtResource("7_5f3p6")]
+[node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(150, 0)
+script = ExtResource("7_rb0md")
 
-[node name="Enemy2" parent="." instance=ExtResource("7_5f3p6")]
-position = Vector2(-187, -87)
+[node name="Sprite" type="Sprite2D" parent="Enemy"]
+position = Vector2(6.794119, 5.25)
+scale = Vector2(1.6176472, 1.617647)
+texture = ExtResource("8_u5ghp")
+region_enabled = true
+region_rect = Rect2(6.114609, 9.073739, 22.304153, 17.843323)
 
-[node name="Enemy3" parent="." instance=ExtResource("7_5f3p6")]
-position = Vector2(-93, 96)
-
-[node name="Enemy4" parent="." instance=ExtResource("7_5f3p6")]
-position = Vector2(76, -99)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(7, 4)
+shape = SubResource("CircleShape2D_hwvp3")

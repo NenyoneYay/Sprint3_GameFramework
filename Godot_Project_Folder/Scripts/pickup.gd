@@ -23,8 +23,8 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_body_entered(body):
-	#if not body.is_in_group("Player"):
-		#return
+	if not body.is_in_group("Player"):
+		return
 	#print("Don't touch me there!")
 	if(name.contains("Diamond")):
 		body.increase_score(500)
