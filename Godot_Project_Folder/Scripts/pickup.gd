@@ -13,13 +13,13 @@ func _ready() -> void:
 	#print("Testing: " + name)
 	return
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var time = Time.get_unix_time_from_system()
 	var y_pos = ((1 + sin(time * bounce_speed)) / 2) * bounce_height
 	global_position.y = start_pos.y - y_pos
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_body_entered(body):
