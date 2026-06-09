@@ -27,11 +27,12 @@ The expected minimum amount of time each Sprint for each category is as follows:
 |Date      |Start Time|Category|Description                                 |Total Minutes|
 |----------|----------|:------:|--------------------------------------------|:-----------:|
 |  5/27    |  3:00    |   TP   | Added a + button to add custom spells      |    60       |
+|  5/27    |  6:00    |   IM   | Initialize files, planning, design doc     |    60       |
 |  5/28    |  7:00    |   IM   | Created player, camera, basic movement     |    120      |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
+|  6/1     |  2:00    |   TP   | Class time and post-class meeting          |    120      |
+|  Varies  |  2:00    |   MTG  | Class meetings                             |    240      |
+|  6/5     |  5:00    |   IM   | Added walls, pickups, background, weapon   |    180      |
+|  6/8     |  8:00    |   IM   | Final stretch, added enemies and game-over |    240      |
 
 _Note: Add more rows as needed._
 
@@ -39,7 +40,7 @@ _Note: Add more rows as needed._
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         |                          |
-|TP - Team Project              |                          |
-|MTG - Class Meetings           |                          |
-|**TOTAL**                      |                          |
+|IM - Individual Module         |              10 hrs      |
+|TP - Team Project              |              4 hrs       |
+|MTG - Class Meetings           |              4 hrs       |
+|**TOTAL**                      |              18 hrs      |
